@@ -22,13 +22,13 @@ export default function ServicesPage() {
             <div className="flex items-center justify-between mb-4">
               <Link
                 href="/"
-                className="flex items-center gap-2 rounded-full bg-blue-900/30 px-4 py-2 text-white hover:bg-blue-800/50 transition-colors"
+                className="flex items-center gap-2 rounded-full bg-teal-900/30 px-4 py-2 text-white hover:bg-teal-800/50 transition-colors"
               >
                 <HomeIcon className="h-4 w-4" />
                 <span>Volver al inicio</span>
               </Link>
             </div>
-            <h1 className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl text-center">
+            <h1 className="bg-gradient-to-r from-white to-teal-400 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl text-center">
               Nuestros Servicios
             </h1>
             <p className="mt-4 text-lg text-gray-400 text-center">Soluciones de Software de Próxima Generación</p>
@@ -39,19 +39,19 @@ export default function ServicesPage() {
             <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 gap-4 bg-transparent h-auto p-0">
               <TabsTrigger
                 value="software"
-                className="data-[state=active]:bg-blue-900/50 data-[state=active]:text-white bg-black/50 border border-blue-900/50 backdrop-blur-sm"
+                className="data-[state=active]:bg-teal-900/50 data-[state=active]:text-white bg-black/50 border border-teal-900/50 backdrop-blur-sm"
               >
                 Desarrollo de Software
               </TabsTrigger>
               <TabsTrigger
                 value="support"
-                className="data-[state=active]:bg-blue-900/50 data-[state=active]:text-white bg-black/50 border border-blue-900/50 backdrop-blur-sm"
+                className="data-[state=active]:bg-teal-900/50 data-[state=active]:text-white bg-black/50 border border-teal-900/50 backdrop-blur-sm"
               >
                 Soporte Técnico
               </TabsTrigger>
               <TabsTrigger
                 value="licensing"
-                className="data-[state=active]:bg-blue-900/50 data-[state=active]:text-white bg-black/50 border border-blue-900/50 backdrop-blur-sm"
+                className="data-[state=active]:bg-teal-900/50 data-[state=active]:text-white bg-black/50 border border-teal-900/50 backdrop-blur-sm"
               >
                 Licenciamiento
               </TabsTrigger>
@@ -59,10 +59,10 @@ export default function ServicesPage() {
 
             <TabsContent value="software" className="space-y-8">
               <div className="grid gap-8 md:grid-cols-2">
-                <Card className="border-blue-900/50 bg-black/50 p-6 backdrop-blur-sm">
+                <Card className="border-teal-900/50 bg-black/50 p-6 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-blue-500/10 p-3">
-                      <Laptop className="h-6 w-6 text-blue-400" />
+                    <div className="rounded-lg bg-teal-500/10 p-3">
+                      <Laptop className="h-6 w-6 text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Desarrollo Web</h3>
@@ -74,10 +74,10 @@ export default function ServicesPage() {
                   </div>
                 </Card>
 
-                <Card className="border-blue-900/50 bg-black/50 p-6 backdrop-blur-sm">
+                <Card className="border-teal-900/50 bg-black/50 p-6 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-blue-500/10 p-3">
-                      <Smartphone className="h-6 w-6 text-blue-400" />
+                    <div className="rounded-lg bg-teal-500/10 p-3">
+                      <Smartphone className="h-6 w-6 text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Desarrollo Móvil</h3>
@@ -89,10 +89,10 @@ export default function ServicesPage() {
                   </div>
                 </Card>
 
-                <Card className="border-blue-900/50 bg-black/50 p-6 backdrop-blur-sm">
+                <Card className="border-teal-900/50 bg-black/50 p-6 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-blue-500/10 p-3">
-                      <Cloud className="h-6 w-6 text-blue-400" />
+                    <div className="rounded-lg bg-teal-500/10 p-3">
+                      <Cloud className="h-6 w-6 text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Soluciones Cloud</h3>
@@ -104,10 +104,10 @@ export default function ServicesPage() {
                   </div>
                 </Card>
 
-                <Card className="border-blue-900/50 bg-black/50 p-6 backdrop-blur-sm">
+                <Card className="border-teal-900/50 bg-black/50 p-6 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-blue-500/10 p-3">
-                      <Database className="h-6 w-6 text-blue-400" />
+                    <div className="rounded-lg bg-teal-500/10 p-3">
+                      <Database className="h-6 w-6 text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Bases de Datos</h3>
@@ -123,10 +123,10 @@ export default function ServicesPage() {
 
             <TabsContent value="support" className="space-y-8">
               <div className="grid gap-8 md:grid-cols-2">
-                <Card className="border-blue-900/50 bg-black/50 p-6 backdrop-blur-sm">
+                <Card className="border-teal-900/50 bg-black/50 p-6 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-blue-500/10 p-3">
-                      <HeadphonesIcon className="h-6 w-6 text-blue-400" />
+                    <div className="rounded-lg bg-teal-500/10 p-3">
+                      <HeadphonesIcon className="h-6 w-6 text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Soporte 24/7</h3>
@@ -138,10 +138,10 @@ export default function ServicesPage() {
                   </div>
                 </Card>
 
-                <Card className="border-blue-900/50 bg-black/50 p-6 backdrop-blur-sm">
+                <Card className="border-teal-900/50 bg-black/50 p-6 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-blue-500/10 p-3">
-                      <Globe className="h-6 w-6 text-blue-400" />
+                    <div className="rounded-lg bg-teal-500/10 p-3">
+                      <Globe className="h-6 w-6 text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Soporte Remoto</h3>
@@ -153,10 +153,10 @@ export default function ServicesPage() {
                   </div>
                 </Card>
 
-                <Card className="border-blue-900/50 bg-black/50 p-6 backdrop-blur-sm">
+                <Card className="border-teal-900/50 bg-black/50 p-6 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-blue-500/10 p-3">
-                      <Shield className="h-6 w-6 text-blue-400" />
+                    <div className="rounded-lg bg-teal-500/10 p-3">
+                      <Shield className="h-6 w-6 text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Mantenimiento Preventivo</h3>
@@ -172,10 +172,10 @@ export default function ServicesPage() {
 
             <TabsContent value="licensing" className="space-y-8">
               <div className="grid gap-8 md:grid-cols-2">
-                <Card className="border-blue-900/50 bg-black/50 p-6 backdrop-blur-sm">
+                <Card className="border-teal-900/50 bg-black/50 p-6 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-blue-500/10 p-3">
-                      <Key className="h-6 w-6 text-blue-400" />
+                    <div className="rounded-lg bg-teal-500/10 p-3">
+                      <Key className="h-6 w-6 text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Gestión de Licencias</h3>
@@ -187,10 +187,10 @@ export default function ServicesPage() {
                   </div>
                 </Card>
 
-                <Card className="border-blue-900/50 bg-black/50 p-6 backdrop-blur-sm">
+                <Card className="border-teal-900/50 bg-black/50 p-6 backdrop-blur-sm">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-blue-500/10 p-3">
-                      <Code2 className="h-6 w-6 text-blue-400" />
+                    <div className="rounded-lg bg-teal-500/10 p-3">
+                      <Code2 className="h-6 w-6 text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Software Personalizado</h3>
@@ -216,7 +216,7 @@ export default function ServicesPage() {
 
             <div className="grid gap-8 md:grid-cols-3">
               {/* Basic Plan */}
-              <Card className="relative overflow-hidden border border-blue-900/50 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(0,100,255,0.15)]">
+              <Card className="relative overflow-hidden border border-teal-900/50 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:border-teal-500/50 hover:shadow-[0_0_30px_rgba(0,100,255,0.15)]">
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">Plan Básico</h3>
                   <div className="mb-4">
@@ -235,8 +235,8 @@ export default function ServicesPage() {
                       "Respaldo semanal",
                     ].map((feature, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <div className="rounded-full bg-blue-500/20 p-1">
-                          <svg className="h-3 w-3 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className="rounded-full bg-teal-500/20 p-1">
+                          <svg className="h-3 w-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
@@ -244,14 +244,14 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-blue-600 text-white hover:bg-blue-500">Seleccionar Plan</Button>
+                  <Button className="w-full bg-teal-600 text-white hover:bg-teal-500">Seleccionar Plan</Button>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 to-teal-600"></div>
               </Card>
 
               {/* Professional Plan */}
-              <Card className="relative overflow-hidden border border-blue-500/50 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,100,255,0.3)] scale-105 z-10">
-                <div className="absolute top-0 left-0 right-0 bg-blue-600 py-1.5 text-center text-sm font-medium text-white">
+              <Card className="relative overflow-hidden border border-teal-500/50 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,100,255,0.3)] scale-105 z-10">
+                <div className="absolute top-0 left-0 right-0 bg-teal-600 py-1.5 text-center text-sm font-medium text-white">
                   Recomendado
                 </div>
                 <div className="p-6 pt-10">
@@ -274,8 +274,8 @@ export default function ServicesPage() {
                       "Soporte prioritario",
                     ].map((feature, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <div className="rounded-full bg-blue-500/20 p-1">
-                          <svg className="h-3 w-3 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className="rounded-full bg-teal-500/20 p-1">
+                          <svg className="h-3 w-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
@@ -283,13 +283,13 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-blue-600 text-white hover:bg-blue-500">Seleccionar Plan</Button>
+                  <Button className="w-full bg-teal-600 text-white hover:bg-teal-500">Seleccionar Plan</Button>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 to-teal-600"></div>
               </Card>
 
               {/* Enterprise Plan */}
-              <Card className="relative overflow-hidden border border-blue-900/50 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(0,100,255,0.15)]">
+              <Card className="relative overflow-hidden border border-teal-900/50 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:border-teal-500/50 hover:shadow-[0_0_30px_rgba(0,100,255,0.15)]">
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">Plan Empresarial</h3>
                   <div className="mb-4">
@@ -312,8 +312,8 @@ export default function ServicesPage() {
                       "Infraestructura dedicada",
                     ].map((feature, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <div className="rounded-full bg-blue-500/20 p-1">
-                          <svg className="h-3 w-3 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className="rounded-full bg-teal-500/20 p-1">
+                          <svg className="h-3 w-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
@@ -321,16 +321,16 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-blue-600 text-white hover:bg-blue-500">Seleccionar Plan</Button>
+                  <Button className="w-full bg-teal-600 text-white hover:bg-teal-500">Seleccionar Plan</Button>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 to-teal-600"></div>
               </Card>
             </div>
 
             <div className="mt-12 text-center">
               <p className="text-gray-400">
                 ¿Necesitas una solución personalizada?{" "}
-                <Link href="/quotation" className="text-blue-400 hover:text-blue-300">
+                <Link href="/quotation" className="text-teal-400 hover:text-teal-300">
                   Contáctanos
                 </Link>{" "}
                 para un plan a medida.
@@ -343,7 +343,7 @@ export default function ServicesPage() {
             <h2 className="text-2xl font-bold text-white mb-4">¿Listo para transformar tu negocio?</h2>
             <p className="text-gray-400 mb-8">Contáctanos hoy mismo para discutir cómo podemos ayudarte.</p>
             <Link href="/quotation">
-              <Button className="bg-blue-600 text-white hover:bg-blue-500" size="lg">
+              <Button className="bg-teal-600 text-white hover:bg-teal-500" size="lg">
                 Solicitar Cotización
               </Button>
             </Link>
@@ -351,8 +351,8 @@ export default function ServicesPage() {
         </div>
 
         {/* Decorative Elements */}
-        <div className="pointer-events-none absolute left-1/4 top-1/4 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-3xl" />
-        <div className="pointer-events-none absolute right-1/4 top-3/4 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute left-1/4 top-1/4 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute right-1/4 top-3/4 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-500/20 blur-3xl" />
       </div>
     </div>
   )

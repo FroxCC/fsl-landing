@@ -78,7 +78,7 @@ export function AnimatedBackground() {
         // Draw star
         ctx.beginPath()
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(255, 255, 255, ${star.brightness})`
+        ctx.fillStyle = `rgba(93, 193, 185, ${star.brightness})`
         ctx.fill()
       })
 
@@ -93,6 +93,14 @@ export function AnimatedBackground() {
     }
   }, [])
 
-  return <canvas ref={canvasRef} className="pointer-events-none absolute inset-0 z-0" style={{ background: "black" }} />
+  return (
+    <canvas
+      ref={canvasRef}
+      className="pointer-events-none absolute inset-0 z-0 w-screen h-screen"
+      style={{
+        background: "black",
+        overflow: "hidden",
+      }}
+    />
+  )
 }
-

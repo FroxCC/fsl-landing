@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -27,15 +28,22 @@ export function Navbar() {
     <nav
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? "border-b border-blue-900/50 bg-black/80 backdrop-blur-md"
+          ? "border-b border-teal-900/50 bg-black/80 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between my-2">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-white">
-              FROM<span className="text-blue-400">SOFTWARE</span>
+            <Link href="/">
+              <Image
+                src="/Formsoftware_Labs_-_Logotipo_Final_WEB_PNG.png"
+                alt="FromSoftware Labs Logo"
+                width={150}
+                height={50}
+                className="h-auto w-auto"
+                priority
+              />
             </Link>
           </div>
 
@@ -43,30 +51,30 @@ export function Navbar() {
           <div className="hidden md:flex md:items-center md:space-x-8">
             <Link
               href="/servicios"
-              className="text-sm text-gray-300 transition-colors hover:text-blue-400"
+              className="text-sm text-gray-300 transition-colors hover:text-teal-400"
             >
               Servicios
             </Link>
-            <Link
+            {/* <Link
               href="#solutions"
-              className="text-sm text-gray-300 transition-colors hover:text-blue-400"
+              className="text-sm text-gray-300 transition-colors hover:text-teal-400"
             >
               Soluciones
-            </Link>
+            </Link> */}
             <Link
               href="/about-us"
-              className="text-sm text-gray-300 transition-colors hover:text-blue-400"
+              className="text-sm text-gray-300 transition-colors hover:text-teal-400"
             >
               Acerca de nosotros
             </Link>
             {/* <Link
               href="#contact"
-              className="text-sm text-gray-300 transition-colors hover:text-blue-400"
+              className="text-sm text-gray-300 transition-colors hover:text-teal-400"
             >
               Contacto
             </Link> */}
             <Link href={"/quotation"}>
-              <Button className="bg-blue-600 text-white hover:bg-blue-500">
+              <Button className="bg-teal-600 text-white hover:bg-teal-500">
                 Empieza ahora
               </Button>
             </Link>
@@ -78,7 +86,7 @@ export function Navbar() {
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="px-2 text-white hover:bg-blue-900/20"
+                  className="px-2 text-white hover:bg-teal-900/20"
                 >
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle menu</span>
@@ -86,7 +94,7 @@ export function Navbar() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-[300px] border-blue-900/50 bg-black/95 backdrop-blur-md"
+                className="w-[300px] border-teal-900/50 bg-black/95 backdrop-blur-md"
               >
                 <SheetHeader>
                   <SheetTitle className="text-white">Menu</SheetTitle>
@@ -94,30 +102,30 @@ export function Navbar() {
                 <div className="mt-8 flex flex-col space-y-4">
                   <Link
                     href="/servicios"
-                    className="text-lg text-gray-300 transition-colors hover:text-blue-400"
+                    className="text-lg text-gray-300 transition-colors hover:text-teal-400"
                   >
                     Servicios
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/solutions"
-                    className="text-lg text-gray-300 transition-colors hover:text-blue-400"
+                    className="text-lg text-gray-300 transition-colors hover:text-teal-400"
                   >
                     Soluciones
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/about-us"
-                    className="text-lg text-gray-300 transition-colors hover:text-blue-400"
+                    className="text-lg text-gray-300 transition-colors hover:text-teal-400"
                   >
                     Acerca de nosotros
                   </Link>
                   {/* <Link
                     href="#contact"
-                    className="text-lg text-gray-300 transition-colors hover:text-blue-400"
+                    className="text-lg text-gray-300 transition-colors hover:text-teal-400"
                   >
                     Contacto
                   </Link> */}
-                  <Button className="mt-4 bg-blue-600 text-white hover:bg-blue-500">
-                  Empieza ahora
+                  <Button className="mt-4 bg-teal-600 text-white hover:bg-teal-500">
+                    Empieza ahora
                   </Button>
                 </div>
               </SheetContent>
