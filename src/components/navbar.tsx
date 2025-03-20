@@ -1,0 +1,130 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+
+export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled
+          ? "border-b border-blue-900/50 bg-black/80 backdrop-blur-md"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          <div className="flex items-center">
+            <Link href="/" className="text-xl font-bold text-white">
+              FROM<span className="text-blue-400">SOFTWARE</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex md:items-center md:space-x-8">
+            <Link
+              href="/servicios"
+              className="text-sm text-gray-300 transition-colors hover:text-blue-400"
+            >
+              Servicios
+            </Link>
+            <Link
+              href="#solutions"
+              className="text-sm text-gray-300 transition-colors hover:text-blue-400"
+            >
+              Soluciones
+            </Link>
+            <Link
+              href="/about-us"
+              className="text-sm text-gray-300 transition-colors hover:text-blue-400"
+            >
+              Acerca de nosotros
+            </Link>
+            {/* <Link
+              href="#contact"
+              className="text-sm text-gray-300 transition-colors hover:text-blue-400"
+            >
+              Contacto
+            </Link> */}
+            <Link href={"/quotation"}>
+              <Button className="bg-blue-600 text-white hover:bg-blue-500">
+                Empieza ahora
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className="px-2 text-white hover:bg-blue-900/20"
+                >
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent
+                side="right"
+                className="w-[300px] border-blue-900/50 bg-black/95 backdrop-blur-md"
+              >
+                <SheetHeader>
+                  <SheetTitle className="text-white">Menu</SheetTitle>
+                </SheetHeader>
+                <div className="mt-8 flex flex-col space-y-4">
+                  <Link
+                    href="/servicios"
+                    className="text-lg text-gray-300 transition-colors hover:text-blue-400"
+                  >
+                    Servicios
+                  </Link>
+                  <Link
+                    href="/solutions"
+                    className="text-lg text-gray-300 transition-colors hover:text-blue-400"
+                  >
+                    Soluciones
+                  </Link>
+                  <Link
+                    href="/about-us"
+                    className="text-lg text-gray-300 transition-colors hover:text-blue-400"
+                  >
+                    Acerca de nosotros
+                  </Link>
+                  {/* <Link
+                    href="#contact"
+                    className="text-lg text-gray-300 transition-colors hover:text-blue-400"
+                  >
+                    Contacto
+                  </Link> */}
+                  <Button className="mt-4 bg-blue-600 text-white hover:bg-blue-500">
+                  Empieza ahora
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
