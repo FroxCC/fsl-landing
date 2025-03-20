@@ -6,7 +6,6 @@ import {
   Code2,
   Cpu,
   HeadphonesIcon,
-  Key,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";

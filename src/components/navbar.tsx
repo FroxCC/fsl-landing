@@ -12,9 +12,17 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation"; // Next.js App Router
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); // Obtiene la ruta actual
+
+  // Cierra el menú cuando cambia la ruta
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,24 +63,12 @@ export function Navbar() {
             >
               Servicios
             </Link>
-            {/* <Link
-              href="#solutions"
-              className="text-sm text-gray-300 transition-colors hover:text-teal-400"
-            >
-              Soluciones
-            </Link> */}
             <Link
               href="/about-us"
               className="text-sm text-gray-300 transition-colors hover:text-teal-400"
             >
               Acerca de nosotros
             </Link>
-            {/* <Link
-              href="#contact"
-              className="text-sm text-gray-300 transition-colors hover:text-teal-400"
-            >
-              Contacto
-            </Link> */}
             <Link href={"/quotation"}>
               <Button className="bg-teal-600 text-white hover:bg-teal-500">
                 Empieza ahora
@@ -82,7 +78,7 @@ export function Navbar() {
 
           {/* Mobile Navigation */}
           <div className="md:hidden">
-            <Sheet>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
@@ -103,30 +99,22 @@ export function Navbar() {
                   <Link
                     href="/servicios"
                     className="text-lg text-gray-300 transition-colors hover:text-teal-400"
+                    onClick={() => setIsOpen(false)}
                   >
                     Servicios
                   </Link>
-                  {/* <Link
-                    href="/solutions"
-                    className="text-lg text-gray-300 transition-colors hover:text-teal-400"
-                  >
-                    Soluciones
-                  </Link> */}
                   <Link
                     href="/about-us"
                     className="text-lg text-gray-300 transition-colors hover:text-teal-400"
+                    onClick={() => setIsOpen(false)}
                   >
                     Acerca de nosotros
                   </Link>
-                  {/* <Link
-                    href="#contact"
-                    className="text-lg text-gray-300 transition-colors hover:text-teal-400"
-                  >
-                    Contacto
-                  </Link> */}
-                  <Button className="mt-4 bg-teal-600 text-white hover:bg-teal-500">
-                    Empieza ahora
-                  </Button>
+                  <Link href={"/quotation"} onClick={() => setIsOpen(false)}>
+                    <Button className="bg-teal-600 text-white hover:bg-teal-500">
+                      Empieza ahora
+                    </Button>
+                  </Link>
                 </div>
               </SheetContent>
             </Sheet>
