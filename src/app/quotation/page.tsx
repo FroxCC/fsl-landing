@@ -183,9 +183,9 @@ export default function QuotationPage() {
                   className="flex w-full items-center justify-center gap-2 border-teal-900/50 bg-green-500 text-black hover:bg-teal-950/50 sm:w-auto"
                   size="lg"
                   onClick={() => {
-                    const phoneNumber = "59169548069" // Reemplaza con el número de WhatsApp
+                    const phoneNumber = "541151261116" // Reemplaza con el número de WhatsApp
                     const message = encodeURIComponent(
-                      "Hola vengo la web FromSoftwareLabs, quiero solicitar una cotización.",
+                      "Hola vengo la web fromsoftwarelabs.com, quiesiera solicitar una cotización.",
                     )
                     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank")
                   }}
